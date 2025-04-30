@@ -2,10 +2,10 @@
 
 using namespace std;
 
-void enterNumberX()
+int enterNumberX()
 {
 }
-void enterDigitN() {}
+int enterDigitN() {}
 void findFirstDigit() {}
 void findNthDigit() {}
 
