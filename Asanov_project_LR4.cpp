@@ -5,7 +5,21 @@ using namespace std;
 int enterNumberX()
 {
 }
-int enterDigitN() {}
+int enterDigitN()
+{
+    int N;
+    cout << "Введите цифру N (0 — последняя, 1 — средняя, 2 — первая справа): ";
+    cin >> N;
+
+    while (N < 0 || N > 2)
+    {
+        cout << "Ошибка: N должно быть 0, 1 или 2. Повторите ввод: ";
+        cin >> N;
+    }
+
+    cout << "Цифра N успешно сохранена: " << N << endl;
+    return N;
+}
 void findFirstDigit() {}
 void findNthDigit() {}
 
