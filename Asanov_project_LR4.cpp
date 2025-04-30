@@ -4,18 +4,6 @@ using namespace std;
 
 int enterNumberX()
 {
-    int X;
-    cout << "Введите трёхзначное число X: ";
-    cin >> X;
-
-    while (X < 100 || X > 999)
-    {
-        cout << "Ошибка: число не является трёхзначным. Повторите ввод: ";
-        cin >> X;
-    }
-
-    cout << "Число X успешно сохранено: " << X << endl;
-    return X;
 }
 int enterDigitN() {}
 void findFirstDigit() {}
