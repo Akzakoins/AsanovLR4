@@ -4,8 +4,34 @@ using namespace std;
 
 int enterNumberX()
 {
+    int X;
+    cout << "Введите трёхзначное число X: ";
+    cin >> X;
+
+    while (X < 100 || X > 999)
+    {
+        cout << "Ошибка: число не является трёхзначным. Повторите ввод: ";
+        cin >> X;
+    }
+
+    cout << "Число X успешно сохранено: " << X << endl;
+    return X;
 }
-int enterDigitN() {}
+int enterDigitN()
+{
+    int N;
+    cout << "Введите цифру N (0 — последняя, 1 — средняя, 2 — первая справа): ";
+    cin >> N;
+
+    while (N < 0 || N > 2)
+    {
+        cout << "Ошибка: N должно быть 0, 1 или 2. Повторите ввод: ";
+        cin >> N;
+    }
+
+    cout << "Цифра N успешно сохранена: " << N << endl;
+    return N;
+}
 void findFirstDigit()
 {
 }
