@@ -4,22 +4,62 @@ using namespace std;
 
 int enterNumberX()
 {
-}
-int enterDigitN() {}
-void findFirstDigit()
-{
     int X;
-    cout << "Введите трёхзначное число X для поиска первой цифры: ";
+    cout << "Введите трёхзначное число X: ";
     cin >> X;
 
     while (X < 100 || X > 999)
     {
-        cout << "Ошибка: число не трёхзначное. Повторите ввод: ";
+        cout << "Ошибка: число не является трёхзначным. Повторите ввод: ";
         cin >> X;
     }
 
-    int firstDigit = X / 100;
-    cout << "Первая цифра числа X: " << firstDigit << endl;
+    cout << "Число X успешно сохранено: " << X << endl;
+    return X;
+}
+int enterDigitN()
+{
+    int N;
+    cout << "Введите цифру N (0 — последняя, 1 — средняя, 2 — первая справа): ";
+    cin >> N;
+
+    while (N < 0 || N > 2)
+    {
+        cout << "Ошибка: N должно быть 0, 1 или 2. Повторите ввод: ";
+        cin >> N;
+    }
+
+    cout << "Цифра N успешно сохранена: " << N << endl;
+    return N;
+}
+void findFirstDigit()
+{
+    int X, N;
+    cout << "Введите трехзначное число X: ";
+    cin >> X;
+    cout << "Введите номер цифры N (нумерация справа налево, с нуля): ";
+    cin >> N;
+
+    if (X < 100 || X > 999)
+    {
+        cout << "Ошибка: X должно быть трехзначным.\n";
+        return;
+    }
+
+    if (N < 0 || N > 2)
+    {
+        cout << "Ошибка: N должно быть 0, 1 или 2 для трехзначного числа.\n";
+        return;
+    }
+
+    int digit;
+    for (int i = 0; i <= N; ++i)
+    {
+        digit = X % 10;
+        X /= 10;
+    }
+
+    cout << "Цифра на позиции N (справа налево): " << digit << "\n";
 }
 void findNthDigit() {}
 
