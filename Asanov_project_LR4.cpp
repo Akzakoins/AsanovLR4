@@ -60,7 +60,36 @@ void findFirstDigit()
     cout << "Первая цифра числа X: " << firstDigit << "\n";
 }
 
-void findNthDigit() {}
+void findNthDigitFromRight()
+{
+    int X, N;
+    cout << "Введите трехзначное число X: ";
+    cin >> X;
+
+    if (X < 100 || X > 999)
+    {
+        std::cout << "Ошибка: X должно быть трехзначным числом.\n";
+        return;
+    }
+
+    cout << "Введите номер цифры N (от 0 до 2, справа налево): ";
+    cin >> N;
+
+    if (N < 0 || N > 2)
+    {
+        cout << "Ошибка: допустимые значения N — 0, 1 или 2.\n";
+        return;
+    }
+
+    int digit;
+    for (int i = 0; i <= N; ++i)
+    {
+        digit = X % 10;
+        X /= 10;
+    }
+
+    cout << "Цифра под номером N (справа налево): " << digit << "\n";
+}
 
 int main()
 {
