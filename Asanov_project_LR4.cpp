@@ -8,18 +8,6 @@ int enterNumberX()
 int enterDigitN() {}
 void findFirstDigit()
 {
-    int X;
-    cout << "Введите трёхзначное число X для поиска первой цифры: ";
-    cin >> X;
-
-    while (X < 100 || X > 999)
-    {
-        cout << "Ошибка: число не трёхзначное. Повторите ввод: ";
-        cin >> X;
-    }
-
-    int firstDigit = X / 100;
-    cout << "Первая цифра числа X: " << firstDigit << endl;
 }
 void findNthDigit() {}
 
