@@ -119,7 +119,7 @@ int main()
             findFirstDigit();
             break;
         case 4:
-            findNthDigit();
+            findNthDigitFromRight();
             break;
         case 0:
             cout << "Выход из программы." << endl;
